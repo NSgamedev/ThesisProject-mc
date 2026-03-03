@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
 
-public class F_PlayerMovement : MonoBehaviour
+
+public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody characterRb;
     public Vector3 movementInput;
@@ -40,7 +40,7 @@ public class F_PlayerMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        if (movementInput != Vector3.zero)
+        if(movementInput != Vector3.zero)
         {
             movementVector = (movementInput.x * transform.right) + (movementInput.z * transform.forward); // Calculate the movement vector based on the input and the player's orientation
 
@@ -77,5 +77,4 @@ public class F_PlayerMovement : MonoBehaviour
         // Update the isMoving variable to false when the movement input is released
         playerAnimator.SetBool("isMoving", false); // Set the "isMoving" parameter in the Animator to false when the movement input is released
     }
-
 }
