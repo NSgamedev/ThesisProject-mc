@@ -49,9 +49,9 @@ public class F_PauseMenu : MonoBehaviour
         playerObject.GetComponent<PlayerInput>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        pauseMenuObject.SetActive(false);
-        ResetPauseUI();
+        
+        pauseMenuObject.SetActive(true);
+       ResetPauseUI();
         
     }
     void ResetPauseUI()//handles reseting the pause menu so that everytime it is open it opens on the start menu
